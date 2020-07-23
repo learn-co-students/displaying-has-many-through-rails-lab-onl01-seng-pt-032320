@@ -8,7 +8,7 @@ class Appointment < ActiveRecord::Base
    end
 
    def doctor_name
-        self.doctor ? self.doctor : nil
+        self.doctor ? self.doctor.name : nil
 
     end 
 
@@ -17,6 +17,6 @@ class Appointment < ActiveRecord::Base
    end
 
    def patient_name
-        self.doctor ? self.patient : nil
+        self.patient ? self.patient.name : nil
    end
 end
