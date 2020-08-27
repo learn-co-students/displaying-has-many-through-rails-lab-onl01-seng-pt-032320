@@ -7,8 +7,8 @@ class Appointment < ApplicationRecord
     end
 
     def doctor_name
-        binding.pry
-        self.doctor? self.doctor.name :nil
+        
+        self.doctor ? self.doctor.name : nil
     end
 
     def patient_name=(n)
@@ -16,6 +16,6 @@ class Appointment < ApplicationRecord
     end
 
     def patient_name
-        self.patient? self.patient.name :nil
+        self.patient ? self.patient.name : nil
     end
 end
