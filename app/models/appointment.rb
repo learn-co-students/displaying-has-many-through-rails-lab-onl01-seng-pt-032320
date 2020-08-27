@@ -7,6 +7,7 @@ class Appointment < ApplicationRecord
     end
 
     def doctor_name
+        binding.pry
         self.doctor? self.doctor.name :nil
     end
 
