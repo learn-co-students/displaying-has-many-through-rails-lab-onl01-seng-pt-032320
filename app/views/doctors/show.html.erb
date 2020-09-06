@@ -5,6 +5,6 @@
 <h2>Upcoming Appointments</h2>
 <ol>
 <% @doctor.appointments.each do |appt| %>
-    <li><%= appt.appointment_datetime.strftime("%B %d, %Y at %k:%M") %> with patient: <%= link_to appt.patient.name, patient_path(appt.patient) %></li>
+    <li><%= appt.datetime_format %> with patient: <%= link_to appt.patient.name, patient_path(appt.patient) %></li>
 <% end %>
 </ol>
